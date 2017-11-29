@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  console.log("loaded");
+  $("#las-vagas").hide();
+  $("#texas").hide();
+    $("#texas-btn").click(function(){
+      console.log("clicked");
+        $("#guncontrol").hide();
+        $("#las-vagas").hide();
+        $("#texas").show();
+    });
+});
