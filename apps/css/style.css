@@ -1,19 +1,23 @@
 iframe	{
 width:60%;
-height:40%;
+height:60%;
 background:#e74f4f;
 border:none;
 position:relative;
 }
 
 #target {
+  position: absolute;
+   left: 30px;
+}
+
+#gun {
   position: relative;
-  left: 10px;
+  left: -30px;
 }
 
 h1 {
   font-family: 'Libre Baskerville', serif;
-  text-align: center;
   font-size: 2.7em;
   color: #000;
   margin-top: -5px;
@@ -28,13 +32,30 @@ p.intro {
   text-align: center;
 }
 
-
 #map {
-       height: 400px;
-       width: 100%;
+        width: 100%;
+        height: 400px;
       }
 
-.tweet{
-  
+      /*TWITTER*/
+#twitter-container{
+  padding: 3px;
+  color: white;
+
 }
-/*mobile*/
+
+a{
+ text-decoration:none;
+ color:#cc0000;
+}
+a.button,div.container{
+ float:center;
+}
+a.button{
+ background-color:#cc0000;
+ border:1px solid #660000;
+ border-radius:5px;
+ color:#fff;
+ margin-right:10px;
+ padding:10px 10px 10px 10px;
+}

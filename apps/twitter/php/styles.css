@@ -1,0 +1,34 @@
+a {
+  font-family: sans-serif;
+}
+
+.tweet {
+  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px lightgrey solid;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+
+.avatar{
+  position:relative;
+}
+
+.div {
+  font-weight: bold;
+  color: #31323D;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px 0 0 0;
+}
+
+.tweet-text {
+  margin: 1px 0 5px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+
+body {
+  background-color: #a8a8a8;
+  padding: 5px;
+}

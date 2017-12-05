@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //writeTable();//
+
   console.log("loaded");
   $("#las-vegas").hide();
   $("#texas").hide();
@@ -24,26 +24,34 @@ $(document).ready(function(){
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
         url += '?' + $.param({
           'api-key': "10bda7bf71614f6cb64801a21b68dc16",
-          'q': "Mass Shooting"
+          'q': "Mass Shootings"
         });
         $.ajax({
           url: url,
           method: 'GET',
-          {  document.getElementById("demo").innerHTML
-        }
         }).done(function(result) {
           console.log(result);
-        }).fail(function(err) {
-          throw err;
+   //parse of the json from nytimes
+       var byline = [];
+      var docs = [];
+      var tempPath = result["response"]["docs"];
+      console.log(tempPath);
 
-        });
+     for (var i = 0, len = tempPath.length; i < len; ++i) {
+       console.log(i);
+
+       byline.push(tempPath[i]["headline"]);
+
+      html += '<li><a href="#" (\''  + tempPath[i]["uri"] + '\')">' + tempPath[i]["headline"]["main"] + '</a></li>'
+     }
+     console.log (result);
+     console.log(byline);
+      $("#result").html(html);
+
+ }).fail(function(err) {
+   throw err;
+
+
+ });
 
 });
-
-
-//function writeTable(){
-  //console.log("writeTable()");
-//$('#datatable').dataTable( {
-      //"ajax": 'shooting.json'
-  //  });
-  //}

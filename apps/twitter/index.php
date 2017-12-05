@@ -11,7 +11,7 @@
 
     <!-- header content -->
     <div class="headInfo">
-      <img id="target" src="../images/target.png" align="right" width="20%" height="30%">
+       <!--<img id="target" src="../images/target.png" align="right" width="20%" height="30%">-->
       <h1>The numbers behind mass shootings in 2017</h1>
     </div>
 
@@ -45,21 +45,11 @@
 <p>
 <iframe src="https://www.google.com/maps/d/embed?mid=13LQ6tjWRSj12Wh9FGAj5XOwdLAk" width="640" height="480"></iframe>
 
-
-<div class="container tabsContainer hidden-desktop">
-       <div class="row">
-           <div class="span12">
-             <iframe id="gun-control" src="composer.json"></iframe>
-                 </div>
-               </div>
-           </div>
+<div id="result"></div>
 
 <!-- include jquery, include tweetlinkit, then open a script tag and call tweetlinkit  $('.tweet').tweetLinkify(); -->
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="../js/script.js"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ7mntyAv0BVSuGuQWBk9tgAYSiumwiFc&callback=initMap">
-    </script>
 </body>
 </html>
