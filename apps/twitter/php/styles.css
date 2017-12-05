@@ -9,8 +9,9 @@ a {
   font-size: 14px;
 }
 
-.avatar{
-  position:relative;
+.avatar {
+  display: block;
+  margin: auto;
 }
 
 .div {

@@ -43,6 +43,7 @@ $(document).ready(function(){
        byline.push(tempPath[i]["headline"]);
 
       html += '<li><a href="#" (\''  + tempPath[i]["uri"] + '\')">' + tempPath[i]["headline"]["main"] + '</a></li>'
+
      }
      console.log (result);
      console.log(byline);
@@ -53,5 +54,38 @@ $(document).ready(function(){
 
 
  });
+ google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawStacked);
 
+function drawStacked() {
+      var data = google.visualization.arrayToDataTable([
+        ['Month', 'Killed', 'Wounded'],
+        ['Jan', 62, 138],
+        ['Feb', 44, 109],
+        ['March', 58, 92],
+        ['April', 46, 176],
+        ['May', 30, 100],
+        ['June', 60, 149],
+        ['July', 42, 179],
+        ['Aug', 34, 154],
+        ['Sept', 32, 126],
+        ['Oct', 94,548],
+        ['Nov', 63,128],
+      ]);
+
+      var options = {
+        title: 'The numbers behind mass shootings',
+        chartArea: {width: '50%'},
+        isStacked: true,
+        hAxis: {
+          title: 'Killed and Wounded',
+          minValue: 0,
+        },
+        vAxis: {
+          title: 'Months'
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
 });
